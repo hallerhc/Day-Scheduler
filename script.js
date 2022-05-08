@@ -16,7 +16,6 @@ function displayTime() {
 
       if(currentHour == timeDiv) {
           $(this).addClass("present");
-          $(this).addClass("future");
       } else if (currentHour < timeDiv) {
           $(this).removeClass("present");
           $(this).addClass("past");
