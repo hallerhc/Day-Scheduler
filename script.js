@@ -15,12 +15,11 @@ function displayTime() {
       var timeDiv = $(this).attr("id").split("-") [1];
 
       if(currentHour == timeDiv) {
-          $(this).addClass("present");
+          $(this).addClass("future");
       } else if (currentHour < timeDiv) {
           $(this).removeClass("present");
           $(this).addClass("past");
       } else if (currentHour > timeDiv) {
-          $(this).removeClass("future");
           $(this).addClass("past");
       }
   });
