@@ -3,7 +3,7 @@ $(document).ready(function(){
 var timeDisplayEl = $('#time-display');
 
 function displayTime() {
-    var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+    rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
     timeDisplayEl.text(rightNow);
   }
 
@@ -12,7 +12,7 @@ function displayTime() {
   let currentHour = moment() .format("HH");
 
   $(".time-div").each(function () {
-      var timeDiv = $(this).attr("id").split("-") [1];
+       timeDiv = $(this).attr("id").split("-") [1];
 
       if(currentHour == timeDiv) {
           $(this).addClass("future");
@@ -26,8 +26,8 @@ function displayTime() {
 
   $(".saveBtn").click(function (event) {
       event.preventDefault();
-      var value = $(this).siblings(".time-block").val();
-      var time = $(this).parent().attr("id").split("-") [1];
+      value = $(this).siblings(".time-block").val();
+      time = $(this).parent().attr("id").split("-") [1];
       localStorage.setItem(time, value);
   });
 
